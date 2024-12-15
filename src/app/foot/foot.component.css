@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Garante que a página ocupe toda a altura da janela */
+    margin: 0;
+    /* Remove margens do body */
+}
+
+footer {
+    margin-top: auto;
+    /* Mantém o footer fixado ao rodapé */
+    background-color: #212529;
+    /* Cor do fundo do footer */
+    color: #ffffff;
+    /* Cor do texto do footer */
+}
