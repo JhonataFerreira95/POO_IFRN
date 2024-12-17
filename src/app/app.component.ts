@@ -3,11 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { FootComponent } from './foot/foot.component';
 import { NavComponent } from './nav/nav.component';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, FootComponent, NavComponent],
+  imports: [RouterOutlet, FormsModule, FootComponent, NavComponent, NgFor],
   template: `
     <app-nav></app-nav>
     <div class="container mt-4">

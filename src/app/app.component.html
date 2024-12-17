@@ -1,3 +1,14 @@
 <app-nav></app-nav>
+
+<ul class="list-group">
+    <li 
+      *ngFor="let entrada of entradas" 
+      class="list-group-item d-flex justify-content-between align-items-center">
+      {{ entrada }}
+      <span class="badge bg-success">✓</span>
+    </li>
+  </ul>
+
+
 <app-foot></app-foot>
 
