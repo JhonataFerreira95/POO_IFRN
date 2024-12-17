@@ -6,8 +6,8 @@ export class Biblioteca {
     adicionarJogo(nome: Jogo) : void{
         this.listaDejogos.push(nome);
     }
-    removerJogo(): void{
-
+    removerJogo(indice : number): void{
+        this.listaDejogos.splice(indice,1);
     }
     exibirLista (): void{
         this.listaDejogos.forEach(jogos => console.log(jogos))
