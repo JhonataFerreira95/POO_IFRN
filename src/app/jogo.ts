@@ -1,4 +1,4 @@
-export abstract class Jogo  {
+export abstract class Jogo {
     protected _titulo : string;
     protected _anoPublicacao : Date;
     protected _fabricante : string;
