@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { FootComponent } from './foot/foot.component';
 import { NavComponent } from './nav/nav.component';
 import { NgFor } from '@angular/common';
+import { Biblioteca } from './biblioteca';
+import { JogoTabuleiro } from './jogo-tabuleiro';
 
 @Component({
   selector: 'app-root',
@@ -13,14 +15,14 @@ import { NgFor } from '@angular/common';
     <app-nav></app-nav>
     <div class="container mt-4">
       <h2 class="mb-4 text-center">Formulário de Entrada</h2>
-      <form (ngSubmit)="adicionarEntrada()" class="row g-3">
+      <form (ngSubmit)="adicionarJogo()" class="row g-3">
         <div class="col-12">
           <input 
             type="text" 
             class="form-control" 
             [(ngModel)]="usuarioInput" 
             name="usuarioInput" 
-            placeholder="Digite algo..." 
+            placeholder="Digite o nome do jogo..." 
             required
           />
         </div>
@@ -30,12 +32,12 @@ import { NgFor } from '@angular/common';
       </form>
 
       <div class="mt-4">
-        <h3>Entradas Salvas:</h3>
+        <h3>Jogos na Biblioteca:</h3>
         <ul class="list-group">
           <li 
-            *ngFor="let entrada of entradas" 
+            *ngFor="let jogo of biblioteca.listaDejogos" 
             class="list-group-item d-flex justify-content-between align-items-center">
-            {{ entrada }}
+            {{ jogo._titulo }} 
             <span class="badge bg-success">✓</span>
           </li>
         </ul>
@@ -48,11 +50,17 @@ import { NgFor } from '@angular/common';
 export class AppComponent {
   title = 'POO_IFRN';
   usuarioInput: string = '';
-  entradas: string[] = [];
+  biblioteca: Biblioteca = new Biblioteca();
 
-  adicionarEntrada() {
+  adicionarJogo() {
     if (this.usuarioInput.trim()) {
-      this.entradas.push(this.usuarioInput);
+      const novoJogo = new JogoTabuleiro(
+        this.usuarioInput, 
+        new Date(), 
+        'Fabricante Exemplo', 
+        4 // Número de jogadores como exemplo
+      );
+      this.biblioteca.adicionarJogo(novoJogo);
       this.usuarioInput = '';
     }
   }
