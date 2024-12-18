@@ -9,7 +9,7 @@ export class Biblioteca {
     removerJogo(indice : number): void{
         this.listaDejogos.splice(indice,1);
     }
-    exibirLista (): void{
-        this.listaDejogos.forEach(jogos => console.log(jogos))
+    exibirLista (): Jogo [] {
+        return this.listaDejogos
     } 
 }
