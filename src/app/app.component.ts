@@ -10,11 +10,17 @@ import { JogoTabuleiro } from './jogo-tabuleiro';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    FormsModule,
+    FootComponent,
+    NavComponent,
+    NgFor
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-   
 export class AppComponent {
   title = 'POO_IFRN';
+  entradas = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
 }
