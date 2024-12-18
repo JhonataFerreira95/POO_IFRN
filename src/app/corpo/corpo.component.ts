@@ -3,11 +3,12 @@ import { Biblioteca } from '../biblioteca';
 import { Jogo } from '../jogo';
 import { JogoTabuleiro } from '../jogo-tabuleiro';
 import { JogoCarta } from '../jogo-carta';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-corpo',
   standalone: true,
-  imports: [],
+  imports: [ FormsModule, NgFor],
   templateUrl: './corpo.component.html',
   styleUrl: './corpo.component.css'
 })
