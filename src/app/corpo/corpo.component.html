@@ -1,1 +1,28 @@
-<p>corpo works!</p>
+<form (ngSubmit) = "adicionarJogo()">
+    <label >Titulo</label>
+    <input type="text" [(ngModel)] = "titulo" name = "titulo" required>
+    <br>
+    <label>Ano de Publicação</label>
+    <input type="date" [(ngModel)] = "anoPublicacao" name="anoPublicacao" required>
+    <br>
+    <label >Fabricante</label>
+    <input type="text" [(ngModel)] = "fabricante" name="fabricante" required>
+    <br>
+    <label for="tipo_de_jogo">Tipo de Jogo</label>
+    <select id="tipo_de_jogo" [(ngModel)]= "tipo_de_jogo" name="tipo_de_jogo">
+        <option value="tabuleiro">tabuleiro</option>
+        <option value="carta">carta</option>
+    </select>
+
+    @if (tipo_de_jogo == 'tabuleiro') {
+        <label>Número de Jogadores</label>
+        <input type="number" [(ngModel)]= "numeroJogadores" name="numeroJogadores">
+    }
+    @else if (tipo_de_jogo == 'carta') {
+        <label>Idade Minima</label>
+        <input type="number" [(ngModel)]= "idadeMinima" name="idadeMinima">
+    }
+
+    <button type="submit">Add Jogo</button>
+
+</form>
