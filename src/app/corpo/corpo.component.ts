@@ -4,6 +4,7 @@ import { Jogo } from '../jogo';
 import { JogoTabuleiro } from '../jogo-tabuleiro';
 import { JogoCarta } from '../jogo-carta';
 import { FormsModule } from '@angular/forms';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-corpo',

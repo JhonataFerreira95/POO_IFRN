@@ -6,6 +6,7 @@ import { NavComponent } from './nav/nav.component';
 import { NgFor } from '@angular/common';
 import { Biblioteca } from './biblioteca';
 import { JogoTabuleiro } from './jogo-tabuleiro';
+import { CorpoComponent } from './corpo/corpo.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { JogoTabuleiro } from './jogo-tabuleiro';
     FormsModule,
     FootComponent,
     NavComponent,
-    NgFor
+    NgFor,
+    CorpoComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
