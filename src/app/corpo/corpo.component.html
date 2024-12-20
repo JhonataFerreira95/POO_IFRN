@@ -1,3 +1,7 @@
+
+
+
+
 <form (ngSubmit)="adicionarJogo()" class="container p-4 border rounded shadow-sm">
     <div class="mb-3">
         <label for="titulo" class="form-label">Título</label>
@@ -76,3 +80,26 @@
 
     <button type="submit" class="btn btn-primary w-100">Adicionar Jogo</button>
 </form>
+
+@if (tipo_de_jogo == 'tabuleiro') {
+    <h2>Tipo: Tabuleiro</h2>
+    @if (listaJogos.length > 0) {
+        @for (game of listaJogos; track $index) {
+            
+           <h4>{{game._titulo}} </h4>
+           <h4>{{game._anoPublicacao}} </h4>
+           <h4>{{game._fabricante}} </h4>
+     }
+    }@else {
+        <h2>Tipo: Carta</h2>
+        @if (listaJogos.length > 0) {
+            @for (game of listaJogos; track $index) {
+                
+               <h4>{{game._titulo}} </h4>
+               <h4>{{game._anoPublicacao}} </h4>
+               <h4>{{game._fabricante}} </h4>
+               
+         }
+        }
+    }
+}

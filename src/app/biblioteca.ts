@@ -1,7 +1,7 @@
 import { Jogo } from "./jogo";
 
 export class Biblioteca {
-    listaDejogos : Jogo [] = [];
+     private listaDejogos : Jogo [] = [];
 
     adicionarJogo(nome: Jogo) : void{
         this.listaDejogos.push(nome);
@@ -9,7 +9,7 @@ export class Biblioteca {
     removerJogo(indice : number): void{
         this.listaDejogos.splice(indice,1);
     }
-    exibirLista (): Jogo [] {
+    exibirLista (): Jogo[] {
         return this.listaDejogos
     } 
 }

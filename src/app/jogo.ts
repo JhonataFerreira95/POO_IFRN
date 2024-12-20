@@ -1,8 +1,8 @@
 export abstract class Jogo {
-    protected _titulo : string;
-    protected _anoPublicacao : Date;
-    protected _fabricante : string;
-    protected _ragras : string [] = []
+    _titulo : string;
+    _anoPublicacao : Date;
+    _fabricante : string;
+    _ragras : string [] = []
 
     constructor(titulo : string, anoPublicacao : Date, fabricante : string){
         this._titulo = titulo;

@@ -22,8 +22,12 @@ export class CorpoComponent {
   fabricante = '';
   numeroJogadores ? = 0;
   idadeMinima ? = 0;
+  
+  lista: Jogo[] = this.biblioteca.exibirLista()
 
-  get jogo() : Jogo[] {
+
+  
+  get listaJogos() : Jogo[] {
     return this.biblioteca.exibirLista();
   }
 
